@@ -9,7 +9,7 @@
 }
 
 .navbar{
-    background: rgb(60, 59, 59);
+    background:rgb(12, 5, 5);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -32,8 +32,8 @@ padding: 0 50px;
 }
 
 #navbar__logo{
-    background-color: rgb(31, 49, 171);
-    background-image: linear-gradient(to top, rgb(255, 255, 255) 0%, rgb(134, 133, 130));
+    background-color: black;
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 0%, rgb(0, 0, 0));
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -127,7 +127,7 @@ padding: 0 50px;
     }
 
     .navbar__menu.active{
-        background:  #333D79FF;
+        background:  rgb(0, 0, 0);
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -144,7 +144,7 @@ padding: 0 50px;
         height: 4px;
         margin: 10px auto;
         transition: all 0.3s ease-in-out;
-        background: black;
+        background: rgba(255, 255, 255, 0.66);
     }
     .navbar__item{
         width:100%
@@ -212,7 +212,7 @@ padding: 0 50px;
     
     .page-container {
         display: flex;
-        background-color: rgb(60, 59, 59);
+        background-color: rgb(0, 0, 0);
         z-index: 1;
         width: 100%;
         padding: 0 50px;
@@ -290,14 +290,11 @@ padding: 0 50px;
     
     
     
-    
-    
-    
     /* moreinfo section */
     
     .moreinfo__container {
         display: flex;
-        background-color: #F1F4FFFF;
+        background-color: rgb(0, 0, 0);
         z-index: 1;
         width: 100%;
         padding: 0 50px;
@@ -328,6 +325,7 @@ padding: 0 50px;
     .header-text {
         font-family: 'Kumbh Sans', sans-serif; 
         font-size: 20px; 
+        color:white;
         line-height: 1.5;
     
     }
@@ -356,7 +354,7 @@ padding: 0 50px;
     
     
     .footer__container {
-        background: rgb(60, 59, 59);
+        background: rgb(12, 5, 5);
         height: 100px;
         display: flex;
         justify-content: flex-end;
@@ -400,7 +398,7 @@ padding: 0 50px;
     .CarBuy-container {
  
         display: flex;
-        background-color: rgb(60, 59, 59);
+        background-color: rgb(0, 0, 0);
         z-index: 1;
         width: 100%;
         padding: 0 50px;
@@ -417,22 +415,20 @@ padding: 0 50px;
         
         }
 
-
+/*
     .box-CarBuy {
         background-color:rgb(60, 59, 59);
         padding: 20px;
         margin: 10px;
         border: 2px solid  transparent;
         border-radius: 10px;
-        width: 70%; /* Width of each box */
+        width: 70%; /* Width of each box 
         height: 550px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center; /* Center content inside */
+        text-align: center; /* Center content inside 
         max-width: 600px;
-    }
-
-
-
+    } 
+    */
 
 
 
@@ -440,7 +436,7 @@ padding: 0 50px;
     .Hiring-container {
  
         display: flex;
-        background-color: rgb(60, 59, 59);
+        background-color: rgb(0, 0, 0);
         z-index: 1;
         width: 100%;
         padding: 0 50px;
@@ -456,6 +452,118 @@ padding: 0 50px;
         border-radius: 10px;
         
         }
+        
+        .hireus__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 100px 20px;
+  text-align: center;
+  border-top: 2px solid #ffffff;
+  margin-top: 60px;
+}
+.hireus__content h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.hireus__content p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+        .hireus__btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: #0e3054;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.hireus__btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+/* ============================= */
+/* 📱 Mobile and Tablet Styling  */
+/* ============================= */
+@media screen and (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .navbar__links {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  /* Home section text and image stack vertically */
+  .page-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homeleft, .homeright {
+    width: 100%;
+  }
+
+  #home__img {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  /* More info section stack */
+  .moreinfo__container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .moreinfo-left, .moreinfo-right {
+    width: 100%;
+  }
+
+  /* Hire Us section scales down */
+  .hireus__container {
+    padding: 60px 15px;
+  }
+
+  .hireus__content h2 {
+    font-size: 1.6rem;
+  }
+
+  .hireus__content p {
+    font-size: 1rem;
+  }
+
+  .hireus__btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
 
 
 
@@ -494,12 +602,12 @@ body {
   justify-content: space-between; /* Pushes one card left and one right */
   align-items: flex-start;
   padding: 70px 15%;
-  background-color: #f8f9fa;
+  background-color: #000000;
   flex-wrap: wrap;
 }
 
 .image-text-card {
-  background: white;
+  background: rgb(0, 0, 0);
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -510,7 +618,7 @@ body {
 
 .image-text-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15);
 }
 
 .image-text-card img {
@@ -525,13 +633,13 @@ body {
 
 .text-content h2 {
   font-size: 1.5rem;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .text-content p {
   font-size: 1rem;
-  color: #555;
+  color: #ffffff;
   line-height: 1.5;
 }
 
