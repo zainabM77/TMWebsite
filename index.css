@@ -363,6 +363,11 @@ padding: 0 50px;
             font-size: 18px; /* Reduce font size for smaller screens */
         }
     }
+    body {
+  background-color: #000000; /* or your main dark color */
+  margin: 0;
+  overflow-x: hidden;
+}
     
    /* footer */
 
@@ -386,7 +391,8 @@ padding: 0 50px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; /* keeps icons centered on phones */
-  margin-bottom: 10px;
+  gap: 15px;
+  margin-bottom: 8px;
 }
 
 .social-icons a {
