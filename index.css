@@ -209,11 +209,14 @@ padding: 0 50px;
        
     }
     
-    html, body {
+html, body {
   margin: 0;
   padding: 0;
-  background-color: #000000; /* or any color you want for your site’s background */
+  background-color: #0a0a0a; /* match your site’s dark theme */
+  color: white;
   overflow-x: hidden;
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
 .page-container, 
