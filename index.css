@@ -425,14 +425,22 @@ padding: 0 50px;
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
+  .footer__container {
+    padding: 20px 0;
+  }
+
+  .social-icons {
+    gap: 12px;
+  }
+
   .social-icons a {
-    width: 2.8rem;
-    height: 2.8rem;
-    margin: 0.4rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
   }
 
   .footer-text {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 }
 
