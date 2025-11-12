@@ -213,17 +213,10 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #0a0a0a; /* match your site’s dark theme */
-  color: white;
+  color: rgb(0, 0, 0);
   overflow-x: hidden;
   height: 100%;
   scroll-behavior: smooth;
-}
-
-.page-container, 
-.moreinfo__container, 
-
-.footer__container {
-  background-color: black;
 }
 
     
