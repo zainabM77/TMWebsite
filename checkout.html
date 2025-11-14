@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Cars 4U</title>
+
+    <link rel="stylesheet" href="checkout.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=CAD"></script>
+
+<script>
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: "199.00" 
+                    },
+                    description: "Car Buying Concierge Package"
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                window.location.href = "success.html";
+            });
+        },
+        onError: function(err) {
+            document.getElementById("error-message").style.display = "block";
+        }
+    }).render("#paypal-button-container");
+</script>
+
+
+
+
+
+
+<body>
+
+    <!--navigation bar section-->
+        <nav class="navbar">
+            <div class="navbar__container">
+<a href="index.html" id="navbar__logo">Cars 4U</a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class = "bar"></span>
+                    <span class = "bar"></span>
+                    <span class = "bar"></span>
+                </div>
+                <ul class= "navbar__menu">
+                    <li class="navbar__item">
+                        <a href="index.html" class="navbar__links"> Home</a>
+                    </li>
+                  
+                    
+                 <!--   <li class="navbar__item">
+                        <a href="Hiring.html" class="navbar__links"> Hiring</a>
+                    </li> --> 
+
+                    <li class="navbar__item">
+                        <a href="CarBuy.html" class="navbar__links"> Resources</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="AboutUs.html" class="navbar__links"> About Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+
+<!-- MAIN CHECKOUT -->
+<div class="checkout-container">
+    
+    <!-- Left side -->
+    <div class="checkout-left">
+        <h2>Complete Your Order</h2>
+
+        <form id="payment-form">
+
+            <label>Email</label>
+            <input type="email" placeholder="you@example.com" required>
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" required>
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(123) 456-7890">
+
+            <label>Address</label>
+            <input type="text" placeholder="Street Address" required>
+            <input type="text" placeholder="City" required>
+            <input type="text" placeholder="Postal Code" required>
+
+            <h3>Payment Info</h3>
+            <input type="text" placeholder="Card Number" maxlength="16" required>
+
+            <div class="row">
+                <input type="text" placeholder="MM/YY" maxlength="5" required>
+                <input type="text" placeholder="CVV" maxlength="3" required>
+            </div>
+
+            <div id="paypal-button-container" style="margin-top:20px;"></div>
+            <p class="error-msg" id="error-message" style="display:none;">
+                There was an error processing your information. Please try again.
+            </p>
+
+        </form>
+    </div>
+
+    <!-- Right side -->
+    <div class="checkout-right">
+        <h3>Your Order</h3>
+
+        <div class="order-summary">
+            <p>Car Buying Concierge Package</p>
+            <p>$199.00 CAD</p>
+        </div>
+
+        <hr>
+
+        <div class="order-total">
+            <strong>Total</strong>
+            <strong>$199.00 CAD</strong>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer__container">
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="footer-text">© 2025 Cars 4U. All rights reserved.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
