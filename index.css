@@ -7,6 +7,12 @@
     outline: none;
     font-family:'Kumbh Sans', sans-serif;
 }
+    body {
+  background-color: #0f0f0f; /* or your main dark color */
+  margin: 0;
+  overflow-x: hidden;
+}
+   
 
 .navbar{
     background:rgb(12, 5, 5);
@@ -26,7 +32,7 @@
     height: 80px;
     justify-content: space-between;
     width: 100%;
-    max-width: 1300;
+    max-width: 1300px;
 margin: 0 auto;
 padding: 0 50px;
 }
@@ -222,13 +228,13 @@ html, body {
     
     .page-container {
         display: flex;
-        background-color: rgb(0, 0, 0);
+        background-color: #0f0f0f;
         z-index: 1;
         width: 100%;
-        padding: 0 50px;
+        padding: 0 20px;
         justify-self: center;
         min-height: 90vh;
-        max-width: 1300px;
+        max-width: 100%;
         align-items: center;
         margin: 0 auto;
         flex-wrap: flex; 
@@ -272,8 +278,7 @@ html, body {
             padding: 0 20px; /* Reduced padding on smaller screens */
         }
     
-        .homeleft,
-        .homeright {
+        .homeleft, .homeright {
             flex: none; /* Remove flex properties */
             width: 100%; /* Make both sections full width */
             padding: 10px; /* Adjust padding */
@@ -297,20 +302,59 @@ html, body {
             font-size: 14px; /* Further adjust paragraph font size */
         }
     }
-    
+    /*
+
+::-webkit-scrollbar {
+width: 5px;
+height: 5px;
+}
+
+::-webkit-scrollbar-track {
+background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #888;
+border-radius: 6px;
+}
+
+::-webkit-scrollbar-button {
+background-color: #000000;
+display: block;
+height: 16px;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpolygon points='50,0 0,50 100,50' fill='gray'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%; 
+}
+
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpolygon points='0,0 100,0 50,50' fill='gray'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+}
+::-webkit-scrollbar-button:hover {
+background-color: #bbb;
+}
+
+*/
     
     
     /* moreinfo section */
     
     .moreinfo__container {
         display: flex;
-        background-color: rgb(0, 0, 0);
+        background-color: #0f0f0f;
         z-index: 1;
         width: 100%;
         padding: 0 50px;
         justify-self: center;
         min-height: 90vh;
-        max-width: 1300px;
+        max-width: 100%;
         align-items: center;
         margin: 0 auto;
         flex-wrap: flex; 
@@ -359,12 +403,7 @@ html, body {
             font-size: 18px; /* Reduce font size for smaller screens */
         }
     }
-    body {
-  background-color: #000000; /* or your main dark color */
-  margin: 0;
-  overflow-x: hidden;
-}
-    
+ 
    /* footer */
 
 .footer__container {
@@ -440,20 +479,15 @@ html, body {
   }
 }
 
-
-
-
-       /*CarBuy container */
     .CarBuy-container {
  
         display: flex;
-        background-color: rgb(0, 0, 0);
         z-index: 1;
         width: 100%;
         padding: 0 50px;
         justify-self: center;
         min-height: 90vh;
-        max-width: 1300px;
+        max-width: 100%;
         align-items: center;
         margin: 0 auto;
         flex-wrap: flex; 
@@ -464,34 +498,19 @@ html, body {
         
         }
 
-/*
-    .box-CarBuy {
-        background-color:rgb(60, 59, 59);
-        padding: 20px;
-        margin: 10px;
-        border: 2px solid  transparent;
-        border-radius: 10px;
-        width: 70%; /* Width of each box 
-        height: 550px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center; /* Center content inside 
-        max-width: 600px;
-    } 
-    */
-
 
 
   /*Hiring container */
     .Hiring-container {
  
         display: flex;
-        background-color: rgb(0, 0, 0);
+        background-color: #0f0f0f;
         z-index: 1;
         width: 100%;
         padding: 0 50px;
         justify-self: center;
         min-height: 90vh;
-        max-width: 1300px;
+        max-width: 100%;
         align-items: center;
         margin: 0 auto;
         flex-wrap: flex; 
@@ -511,6 +530,8 @@ html, body {
   text-align: center;
   border-top: 2px solid #ffffff;
   margin-top: 60px;
+
+
 }
 .hireus__content h2 {
   font-size: 2rem;
@@ -568,14 +589,15 @@ html, body {
 
   /* Home section text and image stack vertically */
   .page-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .homeleft, .homeright {
-    width: 100%;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;   /* allow wrapping when needed */
+}
+.homeleft, .homeright {
+  flex: 1 1 50%;     /* grow/shrink 50% width */
+  padding: 20px;
+}
 
   #home__img {
     width: 90%;
@@ -639,20 +661,24 @@ html, body {
             } */
 
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
-}
+
 
 .AboutUs-container {
-  display: flex;
-  justify-content: space-between; /* Pushes one card left and one right */
-  align-items: flex-start;
-  padding: 70px 15%;
-  background-color: #000000;
-  flex-wrap: wrap;
+  background-color: #0f0f0f;
+  flex-wrap: wrap;        
+  max-width: 100%;
+     width: 100%;
+  min-height: 100vh;          /* full screen height */
+  display: flex;              /* enable flex layout */
+  flex-direction: column;     /* content stacked vertically */
+  justify-content: center;    /* center vertically */
+  align-items: center;        /* center horizontally */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
+
 }
 
 .image-text-card {
@@ -660,7 +686,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 350px;
+  width: 50%;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -671,9 +697,10 @@ body {
 }
 
 .image-text-card img {
-  width: 100%;
+  width: 50%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .text-content {
@@ -705,23 +732,3 @@ body {
   }
 }
 
-/* Make the scrollbar black */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Scrollbar track (background) */
-::-webkit-scrollbar-track {
-  background: #000000;   /* black track */
-}
-
-/* Scrollbar handle (the draggable part) */
-::-webkit-scrollbar-thumb {
-  background: #444444;   /* dark grey */
-  border-radius: 10px;
-}
-
-/* On hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #666666;
-}
