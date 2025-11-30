@@ -8,14 +8,14 @@
     font-family:'Kumbh Sans', sans-serif;
 }
     body {
-  background-color: #0f0f0f; /* or your main dark color */
+  background-color:#121212; /* or your main dark color */
   margin: 0;
   overflow-x: hidden;
 }
    
 
 .navbar{
-    background:rgb(12, 5, 5);
+    background:#121212;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -197,23 +197,6 @@ padding: 0 50px;
     }
 }
 
-.homeleft{
-    flex: 1; 
-    padding: 20px; 
-    }
-    
-    .homeright{
-    flex: 1; 
-    padding: 20px;
-          
-    }
-         
-    #home__img{
-        width: 100%;  
-        height: 100%;
-        border-radius: 10%; 
-       
-    }
     
 html, body {
   margin: 0;
@@ -225,10 +208,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
-    
+    /*home section*/
     .page-container {
         display: flex;
-        background-color: #0f0f0f;
+        background-color: #121212;
         z-index: 1;
         width: 100%;
         padding: 0 20px;
@@ -238,7 +221,23 @@ html, body {
         align-items: center;
         margin: 0 auto;
         flex-wrap: flex; 
+    }
+    .home-left{
+    flex: 1; 
+    padding: 20px; 
+    }
     
+    .home-right{
+    flex: 1; 
+    padding: 20px;
+          
+    }
+         
+    #home__img{
+        width: 100%;  
+        height: 100%;
+        border-radius: 10%; 
+       
     }
     
     
@@ -255,7 +254,7 @@ html, body {
     .welcome-text {
         font-size: 80px; /* Adjust size if needed */
         margin-bottom: 10px; /* Add spacing between h1 and p */
-        color: rgb(255, 255, 255);
+        color: #E0E0E0;
         text-align: center;
         font-family: "Gruppo", sans-serif;
     
@@ -265,7 +264,7 @@ html, body {
         font-family: 'Kumbh Sans', sans-serif; 
         font-size: 20px; /* Adjust size if needed */
         line-height: 1.5;
-        color: rgb(255, 255, 255);
+        color: #B0B0B0 ;
     }
     
     
@@ -344,56 +343,72 @@ background-color: #bbb;
 */
     
     
-    /* moreinfo section */
+    /* steps section */
     
-    .moreinfo__container {
-        display: flex;
-        background-color: #0f0f0f;
-        z-index: 1;
-        width: 100%;
-        padding: 0 50px;
-        justify-self: center;
-        min-height: 90vh;
-        max-width: 100%;
-        align-items: center;
-        margin: 0 auto;
-        flex-wrap: flex; 
-    }
-    
-    .moreinfo-left{
-        flex: 1; 
-        padding: 20px; 
-    }
-    
-    .moreinfo-right{
-        flex: 1; 
-    padding: 20px;
-    }
-    
-    #rugby__img{
-        width: 100%;  
-        height: 100%;
-        border-radius: 10%; 
-    }
-    
-    .header-text {
-        font-family: 'Kumbh Sans', sans-serif; 
-        font-size: 20px; 
-        color:white;
-        line-height: 1.5;
-    
-    }
-    
+.steps-section {
+  padding: 65px 20px;
+  background-color: #121212;
+}
+
+.steps-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.steps-right {
+  flex: 1;
+}
+
+.steps-right h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #E0E0E0;
+}
+
+.steps-list {
+  list-style: none;
+  padding: 0;
+}
+
+.steps-list li {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #B0B0B0;
+}
+
+.steps-list i {
+  font-size: 1.4rem;
+  color: #888888; /* green check mark */
+}
+.steps-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.business-card .icon {
+  font-size: 100px;
+  margin-bottom: 16px;
+  color: #e10600;  /* accent color example */
+}
+
     
     /* Mobile responsive for moreinfo section */
     @media (max-width: 768px) {
-        .moreinfo__container {
+        .steps__container {
             flex-direction: column; /* Stack the columns vertically */
             padding: 0 20px; /* Reduce padding on smaller screens */
         }
     
-        .moreinfo-left,
-        .moreinfo-right {
+        .steps-right,
+        .steps-left {
             flex: none; /* Remove flex properties to allow for stacking */
             width: 100%; /* Make each section full width */
             padding: 10px; /* Adjust padding for smaller screens */
@@ -403,11 +418,103 @@ background-color: #bbb;
             font-size: 18px; /* Reduce font size for smaller screens */
         }
     }
+
+.why-choose-us {
+  text-align: center;
+  padding: 60px 20px;
+  background-color:#121212;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #E0E0E0;
+}
+
+.benefits-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.benefit-card {
+  background: #ffffff;
+  padding: 25px;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.benefit-card .icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: #e10600;  /* accent color example */
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ------- RESPONSIVE FOR PHONES ------- */
+@media (max-width: 768px) {
+  .why-choose-us {
+    padding: 40px 15px;
+  }
+
+  .why-choose-us h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .benefits-container {
+    gap: 20px;
+  }
+
+  .benefit-card {
+    width: 100%;            /* full width on mobile */
+    max-width: 360px;       /* keeps it neat */
+    padding: 20px;
+  }
+
+  .benefit-card .icon {
+    font-size: 32px;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .benefit-card p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
  
    /* footer */
 
 .footer__container {
-  background: rgb(12, 5, 5);
+  background: #121212;
   min-height: 100px;
   display: flex;
   flex-direction: column;
@@ -480,7 +587,6 @@ background-color: #bbb;
 }
 
     .CarBuy-container {
- 
         display: flex;
         z-index: 1;
         width: 100%;
@@ -498,143 +604,73 @@ background-color: #bbb;
         
         }
 
-
-
-  /*Hiring container */
-    .Hiring-container {
- 
-        display: flex;
-        background-color: #0f0f0f;
-        z-index: 1;
-        width: 100%;
-        padding: 0 50px;
-        justify-self: center;
-        min-height: 90vh;
-        max-width: 100%;
-        align-items: center;
-        margin: 0 auto;
-        flex-wrap: flex; 
-        justify-content: center;
-        flex-direction: column;
-        min-height: 100vh;
-        border-radius: 10px;
-        
-        }
-        
-        .hireus__container {
+/* Hiring container */
+.hireus-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: #121212;
   padding: 100px 20px;
   text-align: center;
-  border-top: 2px solid #ffffff;
-  margin-top: 60px;
-
-
+  border-top: 1px solid #ffffff;
+  margin-top: 0;
 }
-.hireus__content h2 {
-  font-size: 2rem;
+
+.hireus-content h2 {
+  font-size: 2.4rem;
   color: #ffffff;
   margin-bottom: 20px;
   font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.hireus__content p {
-  font-size: 1.1rem;
-  color: #ffffff;
-  max-width: 600px;
-  margin: 0 auto 30px;
+.hireus-content p {
+  font-size: 1.2rem;
+  color: #e1e1e1;
+  max-width: 650px;
+  margin: 0 auto 35px;
+  line-height: 1.5;
 }
 
-        .hireus__btn {
+.hireus-btn {
   display: inline-block;
-  padding: 14px 30px;
-  background-color: #0e3054;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 8px;
+  padding: 16px 38px;
+  background-color: #e10600; /* stronger CTA color */
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 10px;
   text-decoration: none;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
-.hireus__btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+
+.hireus-btn:hover {
+  background-color: #a30400;
+  transform: scale(1.06);
 }
 
-
-/* ============================= */
-/* 📱 Mobile and Tablet Styling  */
-/* ============================= */
-@media screen and (max-width: 768px) {
-  /* Navbar adjustments */
-  .navbar__container {
-    flex-direction: column;
-    align-items: flex-start;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hireus-container {
+    padding: 70px 15px;
   }
 
-  .navbar__menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: left;
-    gap: 10px;
-    padding: 10px 0;
+  .hireus-content h2 {
+    font-size: 1.9rem;
   }
 
-  .navbar__links {
-    font-size: 18px;
-    padding: 10px 15px;
-  }
-
-  /* Home section text and image stack vertically */
-  .page-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;   /* allow wrapping when needed */
-}
-.homeleft, .homeright {
-  flex: 1 1 50%;     /* grow/shrink 50% width */
-  padding: 20px;
-}
-
-  #home__img {
-    width: 90%;
-    max-width: 350px;
-    height: auto;
-    margin-top: 20px;
-  }
-
-  /* More info section stack */
-  .moreinfo__container {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .moreinfo-left, .moreinfo-right {
-    width: 100%;
-  }
-
-  /* Hire Us section scales down */
-  .hireus__container {
-    padding: 60px 15px;
-  }
-
-  .hireus__content h2 {
-    font-size: 1.6rem;
-  }
-
-  .hireus__content p {
+  .hireus-content p {
     font-size: 1rem;
+    margin-bottom: 25px;
   }
 
-  .hireus__btn {
-    padding: 12px 24px;
+  .hireus-btn {
+    padding: 14px 30px;
     font-size: 1rem;
   }
 }
+
 
 
 
