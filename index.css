@@ -426,7 +426,8 @@ background-color: #bbb;
 
 .why-choose-us h2 {
   font-size: 2.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
+ 
   color: #E0E0E0;
 }
 
@@ -711,7 +712,72 @@ background-color: #bbb;
   }
 }
 
+/* SECTION */
+.experience-section {
+  background: #000;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
 
+/* TITLE */
+.experience-title {
+  font-size: 3rem;
+  color: #ff2c2c;
+  margin-bottom: 60px;
+}
+
+/* STEPS CONTAINER */
+.experience-steps {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* EACH STEP */
+.experience-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+
+/* NUMBER */
+.experience-step span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff2c2c;
+  min-width: 50px;
+}
+
+/* TEXT */
+.experience-step p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* CTA */
+.experience-cta {
+  margin-top: 60px;
+}
+
+/* BUTTON (reuse if already exists) */
+.hire-btn {
+  background: #ff2c2c;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hire-btn:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}
 
 
 
