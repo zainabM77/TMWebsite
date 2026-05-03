@@ -15,7 +15,7 @@
        
         <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">    
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
         
     </head>
     <body>
@@ -50,37 +50,50 @@
             </div>
         </nav>
 
+<div class="contact">
 
-        <div class="contacts-container">
+  <div class="contact__container fade-in">
 
-  <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-    
-    <div class="contact-left-title">
-      <h2>Want To Reach Out?</h2>
-      <hr>
+    <!-- LEFT SIDE -->
+    <div class="contact__left fade-in">
+      <h1>Ready to upgrade your experience?</h1>
+
+      <p>
+        Reach out today for a complimentary consultation. Let us know what
+        you’re looking for, and we’ll tell you exactly how we can help.
+      </p>
+
+      <div class="contact__info">
+        <div class="info-item">📞 800.555.VEASY</div>
+        <div class="info-item">✉️ hello@veasy.com</div>
+        <div class="info-item">💬 Available on WhatsApp</div>
+      </div>
     </div>
 
-    <input type="hidden" name="access_key" value="db938dc9-6d5e-4773-876f-502298451501">
+    <!-- RIGHT SIDE (FORM) -->
+    <div class="contact__right fade-in">
+      <form action="https://api.web3forms.com/submit" method="POST">
 
-    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+        <input type="hidden" name="access_key" value="YOUR_KEY_HERE">
 
-    <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Jane Doe" required>
 
-    <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="jane@example.com" required>
 
-    <button type="submit">Submit</button>
+        <label>Phone Number</label>
+        <input type="text" name="phone" placeholder="(555) 123-4567">
 
-  </form>
+        <label>What are you looking for?</label>
+        <textarea name="message" placeholder="I'm interested in..."></textarea>
 
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+
+  </div>
 </div>
-
-       
-
-
-
-
-
-
 
 
 

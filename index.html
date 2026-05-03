@@ -16,7 +16,7 @@
        
         <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">    
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
         
     </head>
     <body>
@@ -53,32 +53,27 @@
 
         
 <div class="page-container">
-    <div class="home-left">
-             <h1 class="fade-scroll welcome-text">Skip the dealer. We get you the price you deserve</h1>
-             <p class="fade-scroll student-text"> With our consultants, you steer clear of stress and pushy sales tactics — all while saving valuable time.</p>
-             <!-- <button class = "home__btn"><a href="/">Get started</a></button> --> 
-           
-    </div>
-    <div class="home-right">
-        <img src= "carforwebsite.png" alt="pic" id="home__img" style="border: 5px solid #A2A2A1FF;"/>
-    </div>
+
+  <div class="home-left">
+    <h1 class="fade-in welcome-text">
+      Skip the dealer. We get you the price you deserve
+    </h1>
+
+    <p class="fade-in student-text">
+      With our consultants, you steer clear of stress and pushy sales tactics — all while saving valuable time.
+    </p>
+  </div>
+
+  <div class="home-right fade-in">
+    <img src="carforwebsite.png" alt="pic" id="home__img" style="border: 5px solid #A2A2A1FF;" />
+  </div>
 
 </div>
-
-<script>
-    // When the page loads, add the 'visible' class to fade in the text
-    window.onload = function() {
-        const fadeInElements = document.querySelectorAll('.fade-scroll');
-        fadeInElements.forEach(function(element) {
-            element.classList.add('visible');
-        });
-    }
-</script>
 
 
        <!-- moreinfo -->
       
- <section class="steps-section">
+<section class="steps-section fade-in">
   <div class="steps-container">
 
       <div class="steps-left">
@@ -105,7 +100,7 @@
 </section>
 
 
-    <section class="why-choose-us">
+ <section class="why-choose-us fade-in">
   <h2>Why Choose Us</h2>
 
   <div class="benefits-container">
@@ -139,11 +134,19 @@
 
 
 <!-- Hire Us Section -->
-<div class="hireus-container">
+<div class="hireus-container fade-in">
   <div class="hireus-content">
     <h2>Skip the Hassle — Let Us Handle It</h2>
     <p>We’ll find your car, negotiate the best deal, and save you time and stress. Click below to get started.</p>
-    <a href="Hiring.html" class="hireus-btn fade-scroll">Hire Us</a>
+    <a href="Hiring.html" class="hire-btn primary">Hire Us</a>
+  </div>
+</div>
+
+<div class="hireus-container fade-in">
+  <div class="hireus-content">
+    <h2>Book a Free Consultation Where We Discuss Your Ideal Car</h2>
+    <p> Click below to get started.</p>
+    <a href="consult.html" class="hire-btn secondary">Free Consultation → </a>
   </div>
 </div>
 
