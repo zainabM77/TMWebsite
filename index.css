@@ -722,7 +722,7 @@ body .hireus-container h2 {
   text-decoration: none;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  margin: 0 10px;     
+  margin: 0px;     
 }
 
 .hire-btn.secondary {
@@ -733,14 +733,35 @@ body .hireus-container h2 {
   font-weight: 600;
   border-radius: 6px;          /* smaller radius = less rounded */
   text-decoration: none;
-  letter-spacing: 0.px;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  margin: 0 10px;     
+  margin: 0px;     
 }
 
 .hireus-btn:hover {
   background-color: #a30400;
   transform: scale(1.06);
+}
+
+.hireus-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* clean spacing between buttons */
+  flex-wrap: wrap; /* allows wrapping if needed */
+}
+
+@media (max-width: 768px) {
+  .hireus-buttons {
+    flex-direction: column;  /* stack vertically */
+    align-items: center;
+  }
+
+  .hire-btn.primary,
+  .hire-btn.secondary {
+    width: 100%;           /* full width buttons */
+    max-width: 300px;      /* keeps them clean */
+    text-align: center;
+  }
 }
 
 /* RESPONSIVE */
@@ -851,7 +872,11 @@ body .hireus-container h2 {
 
 /* CTA */
 .experience-cta {
-  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* prevents overlap */
+  margin-top: 40px;
 }
 
 .hire-btn {
@@ -881,6 +906,18 @@ body .hireus-container h2 {
   transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+  .experience-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-cta .hire-btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
 /* MOBILE */
 @media (max-width: 768px) {
   .experience-title {
