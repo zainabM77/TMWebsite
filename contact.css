@@ -14,7 +14,6 @@
 }
    
 
-
 .navbar{
     background:#121212;
     height: 80px;
@@ -213,13 +212,20 @@ padding: 0 50px;
     display: none;
 }
 }
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 
 
 .contact {
-  background: #121212;; /* LIGHT like your reference */
+  background: #121212;
   padding: 80px 50px;
 }
 
+/* MAIN LAYOUT */
 .contact__container {
   display: flex;
   justify-content: space-between;
@@ -227,48 +233,54 @@ padding: 0 50px;
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap; /* 🔥 prevents squishing */
 }
 
 /* LEFT SIDE */
 .contact__left {
-  flex: 1;
-   transition-delay: 0.1s;
+  flex: 1 1 400px;   /* 🔥 allows growth + prevents shrinking too small */
+  min-width: 300px;
+  transition-delay: 0.1s;
 }
 
 .contact__left h1 {
   font-size: 3rem;
   font-family: 'Playfair Display', serif;
   font-weight: 500;
-  color:  #ffffff;
+  color: #f2f2f2; /* softer white */
   margin-bottom: 20px;
 }
+
 body {
   font-family: 'Inter', sans-serif;
 }
 
 .contact__left p {
   font-size: 1.1rem;
-  color: #ffffff;
+  color: #cfcfcf; /* softer than pure white */
   margin-bottom: 30px;
   line-height: 1.6;
 }
 
 .contact__info .info-item {
   font-size: 1rem;
-  color:  #f1e7e7;
+  color: #bdbdbd;
   margin-bottom: 15px;
 }
 
 /* RIGHT SIDE (FORM) */
 .contact__right {
-  flex: 1;
-  background: #fafafa;
+  flex: 1 1 400px;   /* 🔥 prevents thin rectangle issue */
+  min-width: 320px;
+  background: #f5f5f5; /* softer than pure white */
   padding: 30px;
-  border-radius: 6px;
-  border-top: 4px solid #c0392b; /* red accent */
-   transition-delay: 0.25s;
+  border-radius: 10px;
+  border-top: 4px solid #b23a2b; /* softened red */
+  transition-delay: 0.25s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
+/* FORM */
 .contact__right form {
   display: flex;
   flex-direction: column;
@@ -280,14 +292,24 @@ body {
   color: #333;
 }
 
+/* INPUTS */
 .contact__right input,
 .contact__right textarea {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding: 12px;
   border: 1px solid #ddd;
   font-size: 0.95rem;
-  border-radius: 4px;
+  border-radius: 6px;
   outline: none;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+/* subtle focus instead of harsh outline */
+.contact__right input:focus,
+.contact__right textarea:focus {
+  border-color: #b23a2b;
+  box-shadow: 0 0 0 2px rgba(178, 58, 43, 0.15);
 }
 
 .contact__right textarea {
@@ -295,30 +317,51 @@ body {
   resize: none;
 }
 
+/* BUTTON */
 .contact__right button {
-  background: #c0392b;
+  background: #b23a2b;
   color: #fff;
   padding: 14px;
   border: none;
   cursor: pointer;
   font-size: 1rem;
-  transition: 0.3s;
+  border-radius: 6px;
+  transition: 0.25s ease;
 }
 
 .contact__right button:hover {
-  background: #a93226;
+  background: #922d22;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .contact__container {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column; /* THIS is the key */
+    align-items: center;
+    justify-content: center;
+
+    width: 92%;
+    margin: 20px auto;
+
+    padding: 20px;
+    gap: 25px;
+
+    border-radius: 16px; /* gives that “square card” feel */
   }
 
-  .contact__left h1 {
-    font-size: 2rem;
+  .contact__left,
+  .contact__right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact__left {
+    margin-bottom: 10px;
   }
 }
+
+
+/* FADE IN */
 .fade-in {
   opacity: 0;
   transform: translateY(40px);
@@ -329,8 +372,6 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
-
 
 
 .footer__container {
@@ -423,7 +464,11 @@ body {
 /* Mobile adjustments */
 @media (max-width: 600px) {
   .footer__container {
-    padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+    gap: 15px;
   }
 
   .footer-right {
@@ -439,5 +484,6 @@ body {
   .footer-text {
     font-size: 0.75rem;
   }
+  
 
 }
