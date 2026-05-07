@@ -333,31 +333,35 @@ body {
   background: #922d22;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+
+  .contact {
+    padding: 60px 20px;
+  }
+
   .contact__container {
-    display: flex;
-    flex-direction: column; /* THIS is the key */
-    align-items: center;
-    justify-content: center;
-
-    width: 92%;
-    margin: 20px auto;
-
-    padding: 20px;
-    gap: 25px;
-
-    border-radius: 16px; /* gives that “square card” feel */
+    flex-direction: column;
+    align-items: center;   /* ✅ centers everything */
+    gap: 40px;
   }
 
   .contact__left,
   .contact__right {
     width: 100%;
-    text-align: center;
+    max-width: 500px;      /* ✅ keeps nice readable width */
+    min-width: unset;
   }
 
-  .contact__left {
-    margin-bottom: 10px;
+  .contact__left h1 {
+    font-size: 2rem;
   }
+
+  .contact__right {
+    padding: 25px;
+  }
+}
+* {
+  box-sizing: border-box;
 }
 
 
