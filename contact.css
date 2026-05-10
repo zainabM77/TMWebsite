@@ -228,9 +228,20 @@
     }
 }
 .navbar__logo-img {
-  height: clamp(28px, 4vw, 44px);
+  height: 130px;   /* adjust size as needed */
   width: auto;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar__logo-img {
+    height: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .navbar__logo-img {
+    height: 32px;
+  }
 }
 
 ul, li {
