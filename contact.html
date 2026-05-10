@@ -65,7 +65,7 @@
 
       <div class="contact__info">
         <div class="info-item">📞 800.555.VEASY</div>
-        <div class="info-item">✉️ hello@veasy.com</div>
+        <div class="info-item">✉️ veasycarconsultants@outlook.com</div>
         <div class="info-item">💬 Available on WhatsApp</div>
       </div>
     </div>
@@ -73,22 +73,26 @@
     <!-- RIGHT SIDE (FORM) -->
     <div class="contact__right fade-in">
       <form action="https://api.web3forms.com/submit" method="POST">
-
-        <input type="hidden" name="access_key" value="YOUR_KEY_HERE">
+       
+        <!-- Web3Forms Access Key -->
+        <input type="hidden" name="access_key" value="db938dc9-6d5e-4773-876f-502298451501">
 
         <label>Full Name</label>
-        <input type="text" name="name" placeholder="Jane Doe" required>
+      <input type="text" name="name" placeholder="" required>
 
-        <label>Email Address</label>
-        <input type="email" name="email" placeholder="jane@example.com" required>
+     <p class="contact-note">
+  * Either email or phone number is required
+</p>
+      <label>Email Address</label>
+      <input type="email" id="email" name="email" placeholder="">
 
-        <label>Phone Number</label>
-        <input type="text" name="phone" placeholder="(555) 123-4567">
+      <label>Phone Number</label>
+      <input type="text" id="phone" name="phone" placeholder="">
 
-        <label>What are you looking for?</label>
-        <textarea name="message" placeholder="I'm interested in..."></textarea>
+      <label>What are you looking for?</label>
+      <textarea name="message" placeholder="I'm interested in..."></textarea>
 
-        <button type="submit">Submit Request</button>
+      <button type="submit">Submit Request</button>
       </form>
     </div>
 

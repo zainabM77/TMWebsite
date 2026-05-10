@@ -507,3 +507,10 @@ body {
   
 
 }
+
+.contact-note{
+    color: #bdbdbd;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}

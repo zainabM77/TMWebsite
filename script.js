@@ -21,3 +21,24 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 faders.forEach((el) => observer.observe(el));
+
+
+const form = document.querySelector("form");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+
+if (form) {
+  form.addEventListener("submit", function(e) {
+
+    if (email.value.trim() === "" && phone.value.trim() === "") {
+
+      e.preventDefault();
+
+      alert("Please provide either an email address or phone number.");
+
+      email.style.border = "2px solid red";
+      phone.style.border = "2px solid red";
+
+    }
+  });
+}
