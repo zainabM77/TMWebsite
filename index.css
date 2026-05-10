@@ -237,6 +237,11 @@
    transition-delay: -1s;
 }
 }
+.navbar__logo-img {
+  height: 130px;   /* adjust size as needed */
+  width: auto;
+  display: block;
+}
 
 ul, li {
     list-style: none;

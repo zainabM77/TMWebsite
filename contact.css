@@ -227,6 +227,11 @@
         transform: translateY(-9px) rotate(-45deg);
     }
 }
+.navbar__logo-img {
+  height: 130px;   /* adjust size as needed */
+  width: auto;
+  display: block;
+}
 
 ul, li {
     list-style: none;
