@@ -250,7 +250,7 @@
 }
 @media (max-width: 480px) {
   .navbar__logo-img {
-    height: 32px;
+    height: 60px;
   }
 }
 
@@ -839,14 +839,14 @@ body .hireus-container h2 {
 .experience-section {
   background: #121212;
   color: #fff;
-  padding: 120px 20px;
+  padding: 60px 20px 120px; /* top | sides | bottom */
   text-align: center;
 }
 
 /* TITLE */
 .experience-title {
-  font-size: 3rem;
-  margin-bottom: 80px;
+  font-size: 4.5rem;
+  margin-bottom: 70px;
   background: linear-gradient(90deg, #ff2c2c, #ff6a6a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -854,7 +854,7 @@ body .hireus-container h2 {
 
 /* STEPS */
 .experience-steps {
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -862,16 +862,6 @@ body .hireus-container h2 {
   position: relative;
 }
 
-/* vertical line */
-.experience-steps::before {
-  content: "";
-  position: absolute;
-  left: 25px;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: #333;
-}
 
 /* STEP CARD */
 .experience-step {
@@ -880,20 +870,6 @@ body .hireus-container h2 {
   align-items: flex-start;
   text-align: left;
   position: relative;
-}
-
-/* NUMBER */
-.step-number {
-  background: #ff2c2c;
-  color: white;
-  font-weight: bold;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
 }
 
 /* CONTENT CARD */
