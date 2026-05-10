@@ -14,6 +14,7 @@
 }
    
 
+
 .navbar{
     background:#121212;
     height: 80px;
@@ -32,8 +33,9 @@
     justify-content: space-between;
     width: 100%;
     max-width: 1300px;
-margin: 0 auto;
-padding: 0 50px;
+    margin: 0 auto;
+    padding: 0 50px;
+    align-items: center;
 }
 
 #navbar__logo{
@@ -57,17 +59,18 @@ padding: 0 50px;
     margin-right: 0.5rem;
 }
 
+/* DESKTOP NAVBAR */
 .navbar__menu {
-    display:grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: -1000px;
-        opacity:0;
-        transition: all 0.5s ease;
-        height: 100vh;
-        z-index: -1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: static;
+    opacity: 1;
+    height: auto;
+    width: auto;
 }
 
 .navbar__item{
@@ -182,12 +185,13 @@ padding: 0 50px;
     font-size: 1.5rem;        /* optional: bigger like Apple */
 }
 
-    #mobile-menu{
-        position: absolute;
-        top: 5%;
-        right: 5%;
-        transform: translate(5%, 20%);
-    }
+  #mobile-menu{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transform: translate(5%, 20%);
+    z-index: 2000; /* ADD THIS */
+}
     .navbar_btn{
         padding-bottom: 2rem;
 
@@ -201,17 +205,29 @@ padding: 0 50px;
         margin: 0;
     }
 
-    .navbar__toggle .bar{
-        display: block;
-        cursor: pointer;
+   .navbar__toggle .bar{
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.66);
+}
+
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
     }
-#mobile-menu.is-active .bar {
-    opacity: 0;
+
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+    }
 }
-#mobile-menu.is-active {
-    display: none;
-}
-}
+
 ul, li {
     list-style: none;
     margin: 0;
