@@ -950,16 +950,6 @@ body .hireus-container h2 {
   .experience-title {
     font-size: 2rem;
   }
-
-  .experience-steps::before {
-    left: 20px;
-  }
-
-  .step-number {
-    width: 40px;
-    height: 40px;
-    font-size: 0.9rem;
-  }
 }
 
 
